@@ -34,4 +34,16 @@ public class Book {
     public void setIsbnNumber(String isbnNumber) {
         this.isbnNumber = isbnNumber;
     }
+
+    public Book() {
+        this.bookName = "The Discovery of India";
+        this.bookAuthorName = "Jawahar Lal Nehru";
+        this.isbnNumber = "12536142";
+    }
+
+    public Book(String bookName, String bookAuthorName, String isbnNumber) {
+        this.bookName = bookName;
+        this.bookAuthorName = bookAuthorName;
+        this.isbnNumber = isbnNumber;
+    }
 }

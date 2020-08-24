@@ -55,6 +55,20 @@ public class Book {
                 "isbnNumber" + getIsbnNumber() + ".";
     }
 
+    /**
+     * This method will allow the student to issue a Book.
+     */
+    public void doCheckout() {
+        System.out.println("Thank you for issuing \"" + getBookName() + "\".");
+    }
+
+    /**
+     * This method will allow the student to Return a Book.
+     */
+    public void doReturn() {
+        System.out.println("Thank you for returning \"" + getBookName() + "\".");
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

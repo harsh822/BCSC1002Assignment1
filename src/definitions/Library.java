@@ -7,7 +7,7 @@
 package definitions;
 
 public class Library {
-    private final Book[] availableBooks;
+    private Book[] availableBooks;
 
     public Library() {
         this.availableBooks = new Book[5];
@@ -17,6 +17,14 @@ public class Library {
     }
 
     public Library(Book[] availableBooks) {
+        this.availableBooks = availableBooks;
+    }
+
+    public Book[] getAvailableBooks() {
+        return availableBooks.clone();
+    }
+
+    public void setAvailableBooks(Book[] availableBooks) {
         this.availableBooks = availableBooks;
     }
 }

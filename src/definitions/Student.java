@@ -11,4 +11,14 @@ public class Student {
     private long studentUniversityRollNumber;
     private int numberOfBooksIssued;
     private Book[] namesOfBooksIssuedByStudent;
+
+    public Student() {
+        this.studentName = "Harsh";
+        this.studentUniversityRollNumber = 191500316;
+        this.numberOfBooksIssued = 5;
+        this.namesOfBooksIssuedByStudent = new Book[5];
+        for (int i = 0; i < namesOfBooksIssuedByStudent.length; i++) {
+            namesOfBooksIssuedByStudent[i] = new Book();
+        }
+    }
 }

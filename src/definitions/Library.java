@@ -7,5 +7,16 @@
 package definitions;
 
 public class Library {
-    private Book[] availableBooks;
+    private final Book[] availableBooks;
+
+    public Library() {
+        this.availableBooks = new Book[5];
+        for (int i = 0; i < availableBooks.length; i++) {
+            availableBooks[i] = new Book();
+        }
+    }
+
+    public Library(Book[] availableBooks) {
+        this.availableBooks = availableBooks;
+    }
 }

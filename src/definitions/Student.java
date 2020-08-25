@@ -21,4 +21,11 @@ public class Student {
             namesOfBooksIssuedByStudent[i] = new Book();
         }
     }
+
+    public Student(String studentName, long studentUniversityRollNumber, int numberOfBooksIssued, Book[] namesOfBooksIssuedByStudent) {
+        this.studentName = studentName;
+        this.studentUniversityRollNumber = studentUniversityRollNumber;
+        this.numberOfBooksIssued = numberOfBooksIssued;
+        this.namesOfBooksIssuedByStudent = namesOfBooksIssuedByStudent;
+    }
 }

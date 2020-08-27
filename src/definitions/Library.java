@@ -30,23 +30,7 @@ public class Library {
         this.availableBooks = availableBooks;
     }
 
-    /**
-     * This method will allow a student to issue a book.
-     *
-     * @param name The name of the Book that the student wants to issue.
-     */
-    public void doCheckout(String name) {
-        System.out.println("Thank you for issuing \"" + name + "\".");
-    }
 
-    /**
-     * This method will allow a Student  to return a issued Book.
-     *
-     * @param name The name of the Book that the student wants to return.
-     */
-    public void doReturn(String name) {
-        System.out.println("Thank you for returning \"" + name + "\".");
-    }
 
     @Override
     public String toString() {

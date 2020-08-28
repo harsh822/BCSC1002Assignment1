@@ -32,15 +32,19 @@ public class FrontDesk {
             switch (studentInput) {
                 case ISSUE_BOOK:
                     System.out.println("Enter the name of the book you want to issue");
+                    scanner.nextLine();
                     String nameOfIssuingBook = scanner.nextLine();
                     detailsOfInteractingStudent.doCheckout(nameOfIssuingBook);
                     break;
                 case RETURN_BOOK:
                     System.out.println("Enter the name of the Book you want to return: ");
+                    scanner.nextLine();
                     String nameOfReturningBook = scanner.nextLine();
                     detailsOfInteractingStudent.doReturn(nameOfReturningBook);
                     break;
                 case ALL_ISSUED_BOOKS:
+                    System.out.println("All books issued by student");
+                    detailsOfInteractingStudent.listOfIssuedBooks();
                     break;
                 default:
                     break;

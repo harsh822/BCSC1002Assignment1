@@ -58,6 +58,15 @@ public class Student {
         System.out.println("Thank you for returning \"" + name + "\".");
     }
 
+    /**
+     * This method will allow show the names of all all issued books .
+     */
+    public void listOfIssuedBooks() {
+        for (Book book : this.namesOfBooksIssuedByStudent) {
+            System.out.println(book);
+        }
+    }
+
     public String getStudentName() {
         return studentName;
     }

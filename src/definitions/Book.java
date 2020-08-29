@@ -14,9 +14,9 @@ public class Book {
     private String isbnNumber;
 
     public Book() {
-        this.bookName = "The Discovery of India";
-        this.bookAuthorName = "Jawahar Lal Nehru";
-        this.isbnNumber = "12536142";
+        this.bookName = null;
+        this.bookAuthorName = null;
+        this.isbnNumber = null;
     }
 
     public Book(String bookName, String bookAuthorName, String isbnNumber) {

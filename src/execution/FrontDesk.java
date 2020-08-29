@@ -22,6 +22,7 @@ public class FrontDesk {
         int studentInput;
         Student student = new Student();
         Library library = new Library();
+        library.setBooksInLibrary();
         String bookName;
         do {
             System.out.println("-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-");

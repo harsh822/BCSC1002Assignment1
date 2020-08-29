@@ -20,8 +20,8 @@ public class Student {
         this.studentName = "Harsh";
         this.studentUniversityRollNumber = 191500316;
         this.numberOfBooksIssued = 5;
-        this.namesOfBooksIssuedByStudent = new Book[5];
-        for (int i = 0; i < namesOfBooksIssuedByStudent.length; i++) {
+        this.namesOfBooksIssuedByStudent = new Book[MAXIMUM_BOOKS_STUDENT_CAN_ISSUE];
+        for (int i = 0; i < MAXIMUM_BOOKS_STUDENT_CAN_ISSUE; i++) {
             namesOfBooksIssuedByStudent[i] = new Book();
         }
     }

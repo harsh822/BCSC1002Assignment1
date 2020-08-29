@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Student {
+    private static final int MAXIMUM_BOOKS_STUDENT_CAN_ISSUE = 5;
     private String studentName;
     private long studentUniversityRollNumber;
     private int numberOfBooksIssued;
@@ -51,12 +52,28 @@ public class Student {
     }
 
     /**
-     * This method will allow a Student  to return a issued Book.
+     * This method will return the Book which the student has issued.
      *
-     * @param name The name of the Book that the student wants to return.
+     * @param bookName The name of the book which is used to be returned.
+     * @return It will return Boolean value, if return will be successful then it will return true else false.
      */
-    public void doReturn(String name) {
-        System.out.println("Thank you for returning \"" + name + "\".");
+    public boolean returnBook(String bookName) {
+        boolean returnSuccessful = false;
+        int returnBookIndex = 0;
+        for (int tempIndex = 0; tempIndex < MAXIMUM_BOOKS_STUDENT_CAN_ISSUE; tempIndex++) {
+            if (bookName.equals(namesOfBooksIssuedByStudent[tempIndex].getBookName())) {
+                returnSuccessful = true;
+                returnBookIndex = tempIndex;
+                setNumberOfBooksIssued(getNumberOfBooksIssued() - 1);
+                break;
+            }
+        }
+        if (returnSuccessful) {
+            namesOfBooksIssuedByStudent[returnBookIndex].setBookName(null);
+        } else {
+            System.out.println("Please Enter the correct book name.");
+        }
+        return returnSuccessful;
     }
 
     /**

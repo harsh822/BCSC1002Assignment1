@@ -9,6 +9,7 @@ package definitions;
 import java.util.Arrays;
 
 public class Library {
+    private static final int MAXIMUM_BOOKS_IN_LIBRARY = 5;
     private Book[] availableBooks;
 
     public Library() {
@@ -49,4 +50,27 @@ public class Library {
     public int hashCode() {
         return Arrays.hashCode(availableBooks);
     }
+
+    /**
+     * This method will set the Information of books available in Library.
+     */
+    public void setBooksInLibrary() {
+        availableBooks[0].setBookName("Engineering Mathematics");
+        availableBooks[0].setBookAuthorName("H. K. Das");
+        availableBooks[0].setIsbnNumber("9352836537000");
+        availableBooks[1].setBookName("Digital Electronics");
+        availableBooks[1].setBookAuthorName("M. Mano");
+        availableBooks[1].setIsbnNumber("9353062012000");
+        availableBooks[2].setBookName("Database Management System");
+        availableBooks[2].setBookAuthorName("Navathe");
+        availableBooks[2].setIsbnNumber("9789332582705");
+        availableBooks[3].setBookName("Fundamental of Software Engineering");
+        availableBooks[3].setBookAuthorName("Rajib Mall");
+        availableBooks[3].setIsbnNumber("9789388028028");
+        availableBooks[4].setBookName("Core JAVA");
+        availableBooks[4].setBookAuthorName("Dr. R. Nageswara Rao");
+        availableBooks[4].setIsbnNumber("9351199258111");
+    }
+
+
 }

@@ -43,15 +43,6 @@ public class Student {
     }
 
     /**
-     * This method will allow a student to issue a book.
-     *
-     * @param name The name of the Book that the student wants to issue.
-     */
-    public void doCheckout(String name) {
-        System.out.println("Thank you for issuing \"" + name + "\".");
-    }
-
-    /**
      * This method will return the Book which the student has issued.
      *
      * @param bookName The name of the book which is used to be returned.

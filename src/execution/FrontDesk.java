@@ -65,8 +65,7 @@ public class FrontDesk {
                     }
                     break;
                 case ALL_ISSUED_BOOKS:
-                    System.out.println("All books issued by student");
-                    detailsOfInteractingStudent.listOfIssuedBooks();
+                    student.showIssuedBooksByStudent();
                     break;
                 case Exit:
                     System.out.println("Thanks for using our service");
@@ -76,5 +75,6 @@ public class FrontDesk {
                     break;
             }
         } while (studentInput != Exit);
+        scanner.close();
     }
 }

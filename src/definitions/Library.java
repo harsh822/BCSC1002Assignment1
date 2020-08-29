@@ -32,7 +32,6 @@ public class Library {
     }
 
 
-
     @Override
     public String toString() {
         return "availableBooks=" + Arrays.toString(availableBooks) + ".";
@@ -72,5 +71,17 @@ public class Library {
         availableBooks[4].setIsbnNumber("9351199258111");
     }
 
-
+    /**
+     * This method will show the Information of books available in Library.
+     */
+    public void showAvailableBooks() {
+        System.out.println("----------------------------------------------------------------------------------");
+        System.out.printf("|%-36s %-21s %-21s|\n", "Book Name", "Author Name", "13-Digit ISBN Number");
+        System.out.println("----------------------------------------------------------------------------------");
+        for (int libraryIndex = 0; libraryIndex < MAXIMUM_BOOKS_IN_LIBRARY; libraryIndex++) {
+            System.out.printf("|%-36s %-21s %-21s|\n", availableBooks[libraryIndex].getBookName(), availableBooks[libraryIndex].getBookAuthorName(), availableBooks[libraryIndex].getIsbnNumber());
+        }
+        System.out.println("----------------------------------------------------------------------------------");
+    }
 }
+

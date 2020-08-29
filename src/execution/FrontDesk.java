@@ -52,13 +52,17 @@ public class FrontDesk {
                     }
                     System.out.println("Thank you for Issuing the Books..");
                     break;
-
-                break;
                 case RETURN_BOOK:
-                    System.out.println("Enter the name of the Book you want to return: ");
-                    scanner.nextLine();
-                    String nameOfReturningBook = scanner.nextLine();
-                    detailsOfInteractingStudent.doReturn(nameOfReturningBook);
+                    if (student.getNumberOfBooksIssued() == 0) {
+                        System.out.println("Sorry, you haven't issued any book yet so you can't return book.");
+                    } else {
+                        System.out.println("Enter the name of the book you want to return: ");
+                        scanner.nextLine();
+                        bookName = scanner.nextLine();
+                        if (student.returnBook(bookName)) {
+                            System.out.println("Thank you for returning the book " + bookName + ".");
+                        }
+                    }
                     break;
                 case ALL_ISSUED_BOOKS:
                     System.out.println("All books issued by student");

@@ -144,4 +144,20 @@ public class Student {
     public void issueBooksToStudents(int bookIssuingIndex, String bookName) {
         namesOfBooksIssuedByStudent[bookIssuingIndex].setBookName(bookName);
     }
+
+    /**
+     * This method will show all the books which is issued by the Student.
+     */
+    public void showIssuedBooksByStudent() {
+        if (getNumberOfBooksIssued() == 0) {
+            System.out.println("Sorry, you haven't issued any book yet.");
+        } else {
+            System.out.println("These are the books issued by you: ");
+            for (int issuedBookIndex = 0; issuedBookIndex < MAXIMUM_BOOKS_STUDENT_CAN_ISSUE; issuedBookIndex++) {
+                if (namesOfBooksIssuedByStudent[issuedBookIndex].getBookName() != null) {
+                    System.out.print(namesOfBooksIssuedByStudent[issuedBookIndex].getBookName() + (issuedBookIndex < getNumberOfBooksIssued() - 1 ? ", " : ".\n"));
+                }
+            }
+        }
+    }
 }
